@@ -20,3 +20,7 @@ services:
     image: nginx:alpine
     ports:
       - "9090:80"
+  batch-rogue:
+    image: nginx:alpine
+  batch-rogue-adopted:
+    image: redis:alpine
