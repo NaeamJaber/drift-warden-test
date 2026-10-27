@@ -20,3 +20,7 @@ services:
     image: nginx:alpine
     ports:
       - "9090:80"
+  rogue-web:
+    image: nginx:alpine
+    ports:
+      - "8088:80"
