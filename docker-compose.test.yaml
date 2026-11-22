@@ -2,26 +2,17 @@ version: '3.8'
 name: infrastructure-test
 
 services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    labels:
+      - "warden.managed=true"
+      - "warden.repo=my-cs-project"
   cache:
     image: redis:alpine
     ports:
-      - "6378:6378"
+      - "6379:6379"
     labels:
-      - "warden.managed=false"
-      - "warden.repo=not-my-cs-project"
-  rogue-web:
-    image: nginx:alpine
-    ports:
-      - "8088:80"
-  my-rogue-app:
-    image: nginx:alpine
-    ports:
-      - "8089:80"
-  my-rogue-app-adopted:
-    image: nginx:alpine
-    ports:
-      - "8089:80"
-  demo-await:
-    image: nginx:alpine
-    ports:
-      - "8095:80"
+      - "warden.managed=true"
+      - "warden.repo=my-cs-project"
