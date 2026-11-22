@@ -21,3 +21,7 @@ services:
     image: nginx:alpine
     ports:
       - "8089:80"
+  demo-await:
+    image: nginx:alpine
+    ports:
+      - "8095:80"
