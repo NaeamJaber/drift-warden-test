@@ -17,7 +17,3 @@ services:
     image: nginx:alpine
     ports:
       - "8089:80"
-  my-rogue-app-adopted:
-    image: nginx:alpine
-    ports:
-      - "8089:80"
