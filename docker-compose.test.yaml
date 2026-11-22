@@ -13,3 +13,7 @@ services:
     image: nginx:alpine
     ports:
       - "8088:80"
+  my-rogue-app:
+    image: nginx:alpine
+    ports:
+      - "8089:80"
